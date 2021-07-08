@@ -1,72 +1,101 @@
-$SVN-Gotham-Black: "SVN-Gotham-Black";
-$SVN-Gotham-Bold: "SVN-Gotham-Bold";
-$SVN-Gotham-Italic: "SVN-Gotham-Italic";
-$SVN-Gotham-Light: "SVN-Gotham-Light";
-$SVN-Gotham-Regular: "SVN-Gotham";
-$SVN-Gotham-Book: "SVN-Gotham-Book";
-$SVN-Gotham-Medium: "SVN-Gotham-Medium";
+$BarlowLight: "BarlowLight";
+$BarlowBlack: "BarlowBlack";
+$BarlowBold: "BarlowBold";
+$BarlowExtraBold: "BarlowExtraBold";
+$BarlowExtraLight: "BarlowExtraLight";
+$BarlowItalic: "BarlowItalic";
+$BarlowMedium: "BarlowMedium";
+$BarlowRegular: "BarlowRegular";
+$BarlowSemiBold: "BarlowSemiBold";
+$BarlowThin: "BarlowThin";
 
-// SVN-Gotham
 @font-face {
-    font-family: "SVN-Gotham-Medium";
-    src: url("../assets/fonts/SVN-Gotham-Medium/SVN-Gotham-Medium.eot?#iefix") format("embedded-opentype"),
-        url("../assets/fonts/SVN-Gotham-Medium/SVN-Gotham-Medium.otf") format("opentype"),
-        url("../assets/fonts/SVN-Gotham-Medium/SVN-Gotham-Medium.woff") format("woff"),
-        url("../assets/fonts/SVN-Gotham-Medium/SVN-Gotham-Medium.ttf") format("truetype"),
-        url("../assets/fonts/SVN-Gotham-Medium/SVN-Gotham-Medium.svg#SVN-Gotham-Medium") format("svg");
+    font-family: "BarlowLight";
+    src: url("../assets/fonts/BarlowLight/BarlowLight.eot?#iefix") format("embedded-opentype"),
+        url("../assets/fonts/BarlowLight/BarlowLight.woff") format("woff"),
+        url("../assets/fonts/BarlowLight/BarlowLight.ttf") format("truetype"),
+        url("../assets/fonts/BarlowLight/BarlowLight.svg#BarlowLight") format("svg");
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
-    font-family: "SVN-Gotham-Black";
-    src: url("../assets/fonts/SVN-Gotham-Black/SVN-Gotham-Black.eot?#iefix") format("embedded-opentype"),
-        url("../assets/fonts/SVN-Gotham-Black/SVN-Gotham-Black.otf") format("opentype"),
-        url("../assets/fonts/SVN-Gotham-Black/SVN-Gotham-Black.woff") format("woff"),
-        url("../assets/fonts/SVN-Gotham-Black/SVN-Gotham-Black.ttf") format("truetype"),
-        url("../assets/fonts/SVN-Gotham-Black/SVN-Gotham-Black.svg#SVN-Gotham-Black") format("svg");
+    font-family: "BarlowBlack";
+    src: url("../assets/fonts/BarlowBlack/BarlowBlack.eot?#iefix") format("embedded-opentype"),
+        url("../assets/fonts/BarlowBlack/BarlowBlack.woff") format("woff"),
+        url("../assets/fonts/BarlowBlack/BarlowBlack.ttf") format("truetype"),
+        url("../assets/fonts/BarlowBlack/BarlowBlack.svg#BarlowBlack") format("svg");
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
-    font-family: "SVN-Gotham-Bold";
-    src: url("../assets/fonts/SVN-Gotham-Bold/SVN-Gotham-Bold.eot?#iefix") format("embedded-opentype"),
-        url("../assets/fonts/SVN-Gotham-Bold/SVN-Gotham-Bold.woff") format("woff"),
-        url("../assets/fonts/SVN-Gotham-Bold/SVN-Gotham-Bold.ttf") format("truetype"),
-        url("../assets/fonts/SVN-Gotham-Bold/SVN-Gotham-Bold.svg#SVN-Gotham-Bold") format("svg");
+    font-family: "BarlowBold";
+    src: url("../assets/fonts/BarlowBold/BarlowBold.eot?#iefix") format("embedded-opentype"),
+        url("../assets/fonts/BarlowBold/BarlowBold.woff") format("woff"),
+        url("../assets/fonts/BarlowBold/BarlowBold.ttf") format("truetype"),
+        url("../assets/fonts/BarlowBold/BarlowBold.svg#BarlowBold") format("svg");
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
-    font-family: "SVN-Gotham-Book";
-    src: url("../assets/fonts/SVN-Gotham-Book/SVN-Gotham-Book.eot") format("embedded-opentype"),
-        url("../assets/fonts/SVN-Gotham-Book/SVN-Gotham-Book.otf") format("opentype"),
-        url("../assets/fonts/SVN-Gotham-Book/SVN-Gotham-Book.woff") format("woff"),
-        url("../assets/fonts/SVN-Gotham-Book/SVN-Gotham-Book.ttf") format("truetype"),
-        url("../assets/fonts/SVN-Gotham-Book/SVN-Gotham-Book.svg#SVN-Gotham-Book") format("svg");
+    font-family: "BarlowExtraBold";
+    src: url("../assets/fonts/BarlowExtraBold/BarlowExtraBold.eot?#iefix") format("embedded-opentype"),
+        url("../assets/fonts/BarlowExtraBold/BarlowExtraBold.woff") format("woff"),
+        url("../assets/fonts/BarlowExtraBold/BarlowExtraBold.ttf") format("truetype"),
+        url("../assets/fonts/BarlowExtraBold/BarlowExtraBold.svg#BarlowExtraBold") format("svg");
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
-    font-family: "SVN-Gotham-Light";
-    src: url("../assets/fonts/SVN-Gotham-Light/SVN-Gotham-Light.eot?#iefix") format("embedded-opentype"),
-        url("../assets/fonts/SVN-Gotham-Light/SVN-Gotham-Light.woff") format("woff"),
-        url("../assets/fonts/SVN-Gotham-Light/SVN-Gotham-Light.ttf") format("truetype"),
-        url("../assets/fonts/SVN-Gotham-Light/SVN-Gotham-Light.svg#SVN-Gotham-Light") format("svg");
+    font-family: "BarlowExtraLight";
+    src: url("../assets/fonts/BarlowExtraLight/BarlowExtraLight.eot?#iefix") format("embedded-opentype"),
+        url("../assets/fonts/BarlowExtraLight/BarlowExtraLight.woff") format("woff"),
+        url("../assets/fonts/BarlowExtraLight/BarlowExtraLight.ttf") format("truetype"),
+        url("../assets/fonts/BarlowExtraLight/BarlowExtraLight.svg#BarlowExtraLight") format("svg");
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
-    font-family: "SVN-Gotham";
-    src: url("../assets/fonts/SVN-Gotham/SVN-Gotham.eot?#iefix") format("embedded-opentype"),
-        url("../assets/fonts/SVN-Gotham/SVN-Gotham.otf") format("opentype"),
-        url("../assets/fonts/SVN-Gotham/SVN-Gotham.woff") format("woff"),
-        url("../assets/fonts/SVN-Gotham/SVN-Gotham.ttf") format("truetype"),
-        url("../assets/fonts/SVN-Gotham/SVN-Gotham.svg#SVN-Gotham") format("svg");
+    font-family: "BarlowItalic";
+    src: url("../assets/fonts/BarlowItalic/BarlowItalic.eot?#iefix") format("embedded-opentype"),
+        url("../assets/fonts/BarlowItalic/BarlowItalic.woff") format("woff"),
+        url("../assets/fonts/BarlowItalic/BarlowItalic.ttf") format("truetype"),
+        url("../assets/fonts/BarlowItalic/BarlowItalic.svg#BarlowItalic") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "BarlowMedium";
+    src: url("../assets/fonts/BarlowMedium/BarlowMedium.eot?#iefix") format("embedded-opentype"),
+        url("../assets/fonts/BarlowMedium/BarlowMedium.woff") format("woff"),
+        url("../assets/fonts/BarlowMedium/BarlowMedium.ttf") format("truetype"),
+        url("../assets/fonts/BarlowMedium/BarlowMedium.svg#BarlowMedium") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "BarlowRegular";
+    src: url("../assets/fonts/BarlowRegular/BarlowRegular.eot?#iefix") format("embedded-opentype"),
+        url("../assets/fonts/BarlowRegular/BarlowRegular.woff") format("woff"),
+        url("../assets/fonts/BarlowRegular/BarlowRegular.ttf") format("truetype"),
+        url("../assets/fonts/BarlowRegular/BarlowRegular.svg#BarlowRegular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "BarlowSemiBold";
+    src: url("../assets/fonts/BarlowSemiBold/BarlowSemiBold.eot?#iefix") format("embedded-opentype"),
+        url("../assets/fonts/BarlowSemiBold/BarlowSemiBold.woff") format("woff"),
+        url("../assets/fonts/BarlowSemiBold/BarlowSemiBold.ttf") format("truetype"),
+        url("../assets/fonts/BarlowSemiBold/BarlowSemiBold.svg#BarlowSemiBold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "BarlowThin";
+    src: url("../assets/fonts/BarlowThin/BarlowThin.eot?#iefix") format("embedded-opentype"),
+        url("../assets/fonts/BarlowThin/BarlowThin.woff") format("woff"),
+        url("../assets/fonts/BarlowThin/BarlowThin.ttf") format("truetype"),
+        url("../assets/fonts/BarlowThin/BarlowThin.svg#BarlowThin") format("svg");
     font-weight: normal;
     font-style: normal;
 }

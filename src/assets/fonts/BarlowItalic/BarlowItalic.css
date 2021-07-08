@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'BarlowItalic';
+    src: url('fonts/BarlowItalic.eot');
+    src: url('fonts/BarlowItalic.eot') format('embedded-opentype'),
+         url('fonts/BarlowItalic.woff2') format('woff2'),
+         url('fonts/BarlowItalic.woff') format('woff'),
+         url('fonts/BarlowItalic.ttf') format('truetype'),
+         url('fonts/BarlowItalic.svg#BarlowItalic') format('svg');
+}

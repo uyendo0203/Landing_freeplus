@@ -1,5 +1,5 @@
 body {
-    font-family: $SVN-Gotham-Light;
+    font-family: $BarlowLight;
     font-weight: 400;
     font-size: 16px;
     padding: 0;
@@ -516,8 +516,6 @@ button {
 
             &.active,
             &:hover {
-                font-family: $SVN-Gotham-Medium;
-
                 // &::before {
                 //     background-color: #fff;
                 //     height: 0.052vw;
@@ -652,7 +650,6 @@ button {
         li {
             font-size: 1.042vw;
             color: #000000;
-            font-family: $SVN-Gotham-Book;
             @media (max-width: 767px) {
                 font-size: 16px;
                 margin-bottom: 7px;
@@ -668,7 +665,6 @@ button {
     min-width: 13.281vw;
     font-size: 1.042vw;
     padding: 0.7vw 0.781vw;
-    font-family: $SVN-Gotham-Bold;
     text-transform: uppercase;
     text-align: center;
     background-repeat: no-repeat;

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'BarlowThin';
+    src: url('fonts/BarlowThin.eot');
+    src: url('fonts/BarlowThin.eot') format('embedded-opentype'),
+         url('fonts/BarlowThin.woff2') format('woff2'),
+         url('fonts/BarlowThin.woff') format('woff'),
+         url('fonts/BarlowThin.ttf') format('truetype'),
+         url('fonts/BarlowThin.svg#BarlowThin') format('svg');
+}

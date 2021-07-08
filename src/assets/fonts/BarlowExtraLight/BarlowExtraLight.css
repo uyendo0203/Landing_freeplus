@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'BarlowExtraLight';
+    src: url('fonts/BarlowExtraLight.eot');
+    src: url('fonts/BarlowExtraLight.eot') format('embedded-opentype'),
+         url('fonts/BarlowExtraLight.woff2') format('woff2'),
+         url('fonts/BarlowExtraLight.woff') format('woff'),
+         url('fonts/BarlowExtraLight.ttf') format('truetype'),
+         url('fonts/BarlowExtraLight.svg#BarlowExtraLight') format('svg');
+}

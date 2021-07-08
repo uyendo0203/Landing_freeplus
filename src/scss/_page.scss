@@ -1,5 +1,4 @@
 @mixin title {
-    font-family: $SVN-Gotham-Bold;
     text-transform: uppercase;
     font-size: 2.344vw;
     @media (max-width: 767px) {
@@ -7,7 +6,6 @@
     }
 }
 @mixin des {
-    font-family: $SVN-Gotham-Book;
     font-size: 1.042vw;
     @media (max-width: 767px) {
         font-size: 16px;

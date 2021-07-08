@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'BarlowSemiBold';
+    src: url('fonts/BarlowSemiBold.eot');
+    src: url('fonts/BarlowSemiBold.eot') format('embedded-opentype'),
+         url('fonts/BarlowSemiBold.woff2') format('woff2'),
+         url('fonts/BarlowSemiBold.woff') format('woff'),
+         url('fonts/BarlowSemiBold.ttf') format('truetype'),
+         url('fonts/BarlowSemiBold.svg#BarlowSemiBold') format('svg');
+}
