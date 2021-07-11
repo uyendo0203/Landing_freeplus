@@ -1,3 +1,6 @@
+@function vw($px-vw, $base-vw: 1920px) {
+	@return ($px-vw * 100vw) / $base-vw;
+}
 /*use : @include {mixin-name}*/
 @mixin your_slider_wrapper {
 	height: 0;

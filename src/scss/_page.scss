@@ -11,3 +11,104 @@
         font-size: 16px;
     }
 }
+
+.block9 {
+    background: linear-gradient(180deg, #085b96 0%, #133f7b 100%);
+    color: #fff;
+    padding: 2.344vw 18vw 3.125vw 18vw;
+
+    @media (max-width: 767px) {
+        padding: 50px 20px;
+    }
+    &__wrap {
+        @include justify-content(space-between);
+        @media (max-width: 767px) {
+            @include flex-wrap(wrap);
+            @include flex-direction(column);
+        }
+    }
+    &__logo {
+        width: 100%;
+        display: inline-block;
+        width: 13.542vw;
+        @media (max-width: 767px) {
+            width: 100%;
+            max-width: 261px;
+            margin-bottom: 30px;
+            flex: 1;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &__about {
+        width: 26vw;
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+        .home7__label {
+            margin-bottom: 1.302vw;
+            @media (max-width: 767px) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &__about--content {
+        @media (max-width: 767px) {
+            margin-bottom: 30px;
+        }
+    }
+    &__about--item {
+        margin-bottom: 1.302vw;
+        font-size: 0.938vw;
+        @media (max-width: 767px) {
+            font-size: 16px;
+        }
+    }
+    &__label {
+        text-transform: uppercase;
+        font-size: 0.938vw;
+        @media (max-width: 767px) {
+            font-size: 16px;
+        }
+    }
+    &__contact {
+        .home7__label {
+            margin-bottom: 1.042vw;
+            @media (max-width: 767px) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &__phone {
+        color: #0e4d8a;
+        display: inline-block;
+        background-color: #fff;
+        line-height: normal;
+        font-size: 2.083vw;
+        padding: 0.313vw 2.083vw;
+        border-radius: 1.563vw;
+        margin-bottom: 1.563vw;
+
+        @media (max-width: 767px) {
+            font-size: 25px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        &:hover {
+            color: #000;
+            text-decoration: none;
+        }
+    }
+    &__social {
+        @extend .socical;
+        a {
+            width: 2.865vw;
+            height: 2.813vw;
+            @media (max-width: 767px) {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+}
