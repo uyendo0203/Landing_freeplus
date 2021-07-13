@@ -5,7 +5,7 @@
 
 {% include "../elements/_header.twig" %}
 <div class="main_content">
-    <div class="block block1">
+    <div class="block block1 homepage" id="homepage">
         <div class="block1__wrap block1__slider">
             {% for i in  1..3 %}
             <div class="block1__item">
@@ -21,7 +21,7 @@
             {% endfor %}
         </div>
     </div>
-    <div class="block block2">
+    <div class="block block2 about" id="about">
         <div class="block2__wrap d-flex">
             <div class="block2__left wow fadeInUp" data-wow-delay="0.1s">
                 <img alt="" src="./assets/images/block2-img.jpg">
@@ -40,7 +40,7 @@
             </div>
         </div>
     </div>
-    <div class="block block3">
+    <div class="block block3 product" id="product">
         <div class="block3__wrap">
             <div class="block3__heading wow fadeInUp" data-wow-delay="0.1s">
                 <div class="block3__heading-wrap">
@@ -84,8 +84,52 @@
                             {% endfor %}
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="tab2">Profile</div>
-                    <div class="tab-pane fade" id="tab3">Profile</div>
+                    <div class="tab-pane fade" id="tab2">
+                        <div class="block3__tab  block3__tab-slider">
+                            {% for i in  1..6 %}
+                            <div class="block3__tab-item">
+                                <figure class="block3__tab-img">
+                                    <img alt="" src="./assets/images/block3-img-1.png">
+                                </figure>
+                                <div class="block3__tab-text">
+                                    <div class="block3__tab-title">
+                                        Sed ut perspiciatis unde omnis iste
+                                    </div>
+                                    <div class="block3__tab-subtitle">
+                                        Odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                                    </div>
+                                    <div class="block3__tab-btn">
+                                        <a href="#" class="button button-blue">DISCOVER MORE</a>
+                                        <a href="#" class="button button-white-outline">FIND STORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab3">
+                        <div class="block3__tab  block3__tab-slider">
+                            {% for i in  1..6 %}
+                            <div class="block3__tab-item">
+                                <figure class="block3__tab-img">
+                                    <img alt="" src="./assets/images/block3-img-1.png">
+                                </figure>
+                                <div class="block3__tab-text">
+                                    <div class="block3__tab-title">
+                                        Sed ut perspiciatis unde omnis iste
+                                    </div>
+                                    <div class="block3__tab-subtitle">
+                                        Odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                                    </div>
+                                    <div class="block3__tab-btn">
+                                        <a href="#" class="button button-blue">DISCOVER MORE</a>
+                                        <a href="#" class="button button-white-outline">FIND STORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -101,7 +145,12 @@
                     </figure>
                     <div class="block4__item-text">
                         <div class="block4__item-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
-                        <a href="#" class="block4__item-link">Read more ></a>
+                        <a
+                            href="#"
+                            class="block4__item-link"
+                            data-toggle="modal"
+                            data-target="#News"
+                        >Read more ></a>
                     </div>
                 </div>
                 {% endfor %}
@@ -112,7 +161,12 @@
                     </figure>
                     <div class="block4__item-text">
                         <div class="block4__item-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
-                        <a href="#" class="block4__item-link">Read more ></a>
+                        <a
+                            href="#"
+                            class="block4__item-link"
+                            data-toggle="modal"
+                            data-target="#News"
+                        >Read more ></a>
                     </div>
                 </div>
                 {% endfor %}
@@ -170,7 +224,9 @@
                 <div class="block6__item">
                     <div class="block6__img">
                         <img alt="" class="img" src="./assets/images/block6-img-{{i}}.jpg">
-                        <img alt="" class="icon" src="./assets/images/icon-play.png">
+                        <a data-fancybox-type="iframe" href="https://www.youtube.com/embed/_MXyU5D6D-g?&autoplay=1&mute=1&loop=1&rel=0&showinfo=0" class="fancybox">
+                            <img alt="" class="icon" src="./assets/images/icon-play.png">
+                        </a>
                     </div>
                     <div class="block6__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                 </div>
@@ -179,7 +235,9 @@
                 <div class="block6__item">
                     <div class="block6__img">
                         <img alt="" class="img" src="./assets/images/block6-img-{{i}}.jpg">
-                        <img alt="" class="icon" src="./assets/images/icon-play.png">
+                        <a data-fancybox-type="iframe" href="https://www.youtube.com/embed/_MXyU5D6D-g?&autoplay=1&mute=1&loop=1&rel=0&showinfo=0" class="fancybox">
+                            <img alt="" class="icon" src="./assets/images/icon-play.png">
+                        </a>
                     </div>
                     <div class="block6__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                 </div>
@@ -195,7 +253,7 @@
             </div>
         </div>
     </div>
-    <div class="block block7">
+    <div class="block block7 contactus" id="contactus">
         <div class="block7__wrap d-flex">
             <div class="block7__left wow fadeInUp" data-wow-delay="0.1s">
                 <figure class="block7__img wow">
@@ -248,7 +306,7 @@
             </div>
         </div>
     </div>
-    <div class="block block8">
+    <div class="block block8 store" id="store">
         <div class="block8__wrap">
             <div class="block8__heading wow fadeInUp" data-wow-delay="0.1s">
                 <div class="block8__title">our stores</div>
@@ -304,6 +362,62 @@
                     <a href="./#">
                         <img src="./assets/images/icon-fb-white.png" alt="facebook">
                     </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{# modal news #}
+<div
+    class="modal fade in show news-modal"
+    id="News"
+    tabindex="-1"
+    role="dialog"
+>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <span class="close" data-dismiss="modal" aria-label="Close">
+                x
+            </span>
+            <div class="modal-body">
+                <div class="news-modal__title">
+                    NHỮNG DỰ ÁN ĐỊNH HƯỚNG PHÁT TRIỂN HẠ TẦNG TP. THỦ ĐỨC
+                </div>
+                <div class="news-modal__content">
+                    <p>
+                        Theo ông Trần Văn Bảy, Chủ tịch UBND quận 9, do những tuyến đường được đầu tư, nâng cấp thuộc
+                        trục giao thông chính của khu vực, mang tính chất kết nối liên quận, liên phường nên việc đầu tư
+                        nhằm thúc đẩy phát triển hạ tầng chung, đặc biệt, sẽ định hướng phát triển hạ tầng TP. Thủ Đức
+                        trong tương lai.
+                    </p>
+                    <p>
+                        Trao đổi với Nhadautu.vn, ông Trần Văn Bảy, Chủ tịch UBND quận 9 cho biết, ngoài những dự án đang
+                        được triển khai, thì hiện quận và Ban quản lý dự án đầu tư xây dựng các công trình giao thông
+                        TP.HCM đã lập thủ tục xin chủ trương UBND TP.HCM tiến hành thực hiên nâng cấp, mở rộng một số
+                        tuyến đường trọng điểm trên địa bàn trong giai đoạn từ 2021-2025.
+                    </p>
+                    <p>
+                        “Hiện một vài đoạn trên các tuyến đường như Đỗ Xuân Hợp, Lò Lu, Nguyễn Duy Trinh… đã được triển
+                        khai trước đó, còn một số khác đã lập thủ tục đề xuất và vẫn đang trong quá trình chờ phê duyệt
+                        của UBND TP.HCM để thực hiện”, ông Bảy thông tin.
+                    </p>
+                    <p>
+                        Trong khi đó, nói về mục tiêu đầu tư những tuyến đường, ông Bảy cho hay, do đây là các trục giao
+                        thông chính của khu vực, mang tính chất kết nối liên quận, liên phường nên việc đầu tư nhằm thúc
+                        đẩy phát triển hạ tầng chung, đặc biệt, sẽ định hướng phát triển hạ tầng TP. Thủ Đức trong tương
+                        lai.
+                    </p>
+                    <p>
+                        Đường Đỗ Xuân Hợp
+
+                        Về hiện trạng, dự án có lý trình từ ngã tư đường Bình Thái đến Nguyễn Duy Trinh, đường bê tông
+                        nhựa nóng, với bề rộng mặt đường khoảng 7m-10m (lộ giới 30m) và có chiều dài khoảng 4.769m.
+
+                        Theo UBND quận 9, trên tuyến này hiện có 2 dự án đang triển khai thi công là dự án Xây dựng cầu
+                        Nam Lý, có tổng mức đầu tư khoảng 529 tỷ đồng; dự án nâng cấp, mở rộng đường Đỗ Xuân Hợp đoạn từ
+                        cầu Nam Lý đến đường Nguyễn Duy Trinh với quy mô rộng 30m, chiều dài 1.830m, có tổng mức đầu tư
+                        phần xây lắp khoảng 360 tỷ đồng (chưa tính chi phí bồi thường và lập dự án bồi thường riêng).
+                    </p>
                 </div>
             </div>
         </div>

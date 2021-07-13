@@ -87,12 +87,23 @@ function goToByScroll(link) {
 
     let space = 0
     switch (link) {
-        case 'dangky':
-            space = -100
+
+        case 'about':
+            space = -10
             break;
-        case 'lienhe':
-            space = 800
+
+        case 'product':
+            space = -50
             break;
+
+        case 'store':
+            space = -20
+            break;
+
+        case 'contactus':
+            space = -160
+            break;
+
         default:
             space = 70
             break;
@@ -132,20 +143,20 @@ let Menu = function () {
     })
 }
 
-let Home5ValidateForm = function () {
+let Block7ValidateForm = function () {
     var form = [{
-        name: '.home5Name',
+        name: '.block7Name',
         validators: ['required']
     }, {
-        name: '.home5Phone',
+        name: '.block7Phone',
         validators: ['required', 'isNumber'],
         // minLength: 10,
         // maxLength: 10,
     }, {
-        name: '.home5Email',
+        name: '.block7Email',
         validators: []
     }]
-    var $submit = ".home5__form button";
+    var $submit = ".block7__form button";
     validateForm($submit, form);
 }
 
@@ -199,10 +210,34 @@ let sliderBlock3 = function () {
         dots: false,
         autoplay: false,
         autoplaySpeed: 3000,
-        slidesToShow: 5,
+        slidesToShow: 3,
         centerMode: true,
         slidesToScroll: 1,
         infinite: true,
+        centerPadding: '270px',
+        responsive: [
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 3,
+                    centerPadding: '100px',
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    centerPadding: '50px',
+                }
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: false,
+                }
+            },
+        ]
     });
 }
 let sliderBlock4 = function () {
@@ -220,6 +255,15 @@ let sliderBlock4 = function () {
         infinite: true,
         prevArrow: $('.block4 .slick-prev'),
         nextArrow: $('.block4 .slick-next'),
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false
+                }
+            },
+        ]
     });
 }
 let sliderBlock5 = function () {
@@ -237,6 +281,14 @@ let sliderBlock5 = function () {
         infinite: true,
         prevArrow: $('.block5 .slick-prev'),
         nextArrow: $('.block5 .slick-next'),
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false
+                }
+            },
+        ]
     });
 }
 let sliderBlock6 = function () {
@@ -254,6 +306,15 @@ let sliderBlock6 = function () {
         infinite: true,
         prevArrow: $('.block6 .slick-prev'),
         nextArrow: $('.block6 .slick-next'),
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false
+                }
+            },
+        ]
     });
 }
 let sliderBlock8 = function () {
@@ -279,6 +340,13 @@ let sliderBlock8 = function () {
                     slidesToShow: 3
                 }
             },
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 2,
+                    variableWidth: false,
+                }
+            },
         ]
     });
 }
@@ -291,26 +359,23 @@ $(window).on("load", function () {
     GotoForm()
     Menu()
 
+    // common 
+    $(".fancybox").fancybox({
+        type: "iframe",
+        helpers: {
+            title: {
+                type: 'over'
+            }
+        }
+    });
+
 
     // slider on tab 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-        if ($(".product2__item").length > 1) {
-            $(".product2__slider").slick('resize');
+        if ($(".block3__tab").length > 1) {
+            $(".block3__tab-slider").slick('resize');
         }
     })
-
-    // goto block when onLoad 
-    let temp = location.href.indexOf('#')
-    if (temp != -1) {
-        let link = location.hash.split('#')[1];
-        goToByScroll(link);
-
-        setTimeout(function () {
-            $('.header-menu__nav a').removeClass('active');
-            $('.header-menu__nav a[link=' + link + ']').addClass('active');
-        }, 1000)
-    }
-
 
     sliderBlock1()
     sliderBlock3()
@@ -319,12 +384,12 @@ $(window).on("load", function () {
     sliderBlock6()
     sliderBlock8()
 
-    Home5ValidateForm()
+    Block7ValidateForm()
 });
 
 
 
-var sections = $('section')
+var sections = $('.block')
     , nav_text = $('.header-menu__nav')
     , nav_height = nav_text.outerHeight();
 
