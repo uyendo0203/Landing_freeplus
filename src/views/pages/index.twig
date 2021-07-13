@@ -6,33 +6,29 @@
 {% include "../elements/_header.twig" %}
 <div class="main_content">
     <div class="block1">
-        <div class="block1__wrap">
-            <div class="block1__slider">
-                <!---->
-                {% for i in  1..5 %} -->
-                <div class="block1__item">
-                    <figure class="block1__img">
-                        <img alt="" src="./assets/images/logo.png">
-                    </figure>
-                    <div class="block1__content">
-                        <h2 class="block1__title">At vero eos et accusamus et iusto odio dignissimos</h2>
-                        <h3 class="block1__des">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</h3>
-                        <a href="#" class="button-white">DISCOVER MORE</a>
-                    </div>
+        <div class="block1__wrap block1__slider">
+            {% for i in  1..3 %}
+            <div class="block1__item">
+                <figure class="block1__img">
+                    <img alt="" src="./assets/images/block1-img.jpg">
+                </figure>
+                <div class="block1__content">
+                    <h2 class="block1__title">At vero eos et accusamus et iusto odio dignissimos</h2>
+                    <h3 class="block1__des">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</h3>
+                    <a href="#" class="button button-white">DISCOVER MORE</a>
                 </div>
-                <!---->
-                {% endfor %} -->
             </div>
+            {% endfor %}
         </div>
     </div>
     <div class="block2">
-        <div class="block2__wrap">
-            <div class="block2__left">
-                <img alt="" src="./assets/images/logo.png">
+        <div class="block2__wrap d-flex">
+            <div class="block2__left wow fadeInUp" data-wow-delay="0.1s">
+                <img alt="" src="./assets/images/block2-img.jpg">
             </div>
-            <div class="block2__right">
+            <div class="block2__right wow fadeInUp" data-wow-delay="0.2s">
                 <div class="block2__logo">
-                    <img alt="" src="./assets/images/logo.png">
+                    <img alt="" src="./assets/images/block2-logo.jpg">
                 </div>
                 <div class="block2__title">
                     At vero eos et accusamus et iusto odio dignissimos
@@ -46,106 +42,175 @@
     </div>
     <div class="block3">
         <div class="block3__wrap">
-            <div class="block3__heaing">
-                <h2 class="block3__title">our product</h2>
-                <h3 class="block3__sub-title">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.</h3>
+            <div class="block3__heading wow fadeInUp" data-wow-delay="0.1s">
+                <div class="block3__heading-wrap">
+                    <h2 class="block3__title">our product</h2>
+                    <h3 class="block3__sub-title">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.</h3>
+                </div>
             </div>
             <div class="block3__content">
-                <ul class="nav nav-tabs" role="tablist">
+                <ul class="nav nav-tabs wow fadeInUp" data-wow-delay="0.2s" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#tab1">Home</a>
+                        <a class="nav-link active" data-toggle="tab" href="#tab1">Sản phẩm bán chạy</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#tab2">Profile</a>
+                        <a class="nav-link" data-toggle="tab" href="#tab2">Sản phẩm mới</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tab3">Sản phẩm khuyến mãi</a>
                     </li>
                 </ul>
-                <div class="tab-content">
+                <div class="tab-content wow fadeInUp" data-wow-delay="0.3s">
                     <div class="tab-pane fade show active" id="tab1">
-                        <div class="block3__tab">
-                            <figure class="block3__tab-img">
-                                <img alt="" src="./assets/images/logo.png">
-                            </figure>
-                            <div class="block3__tab-text">
-                                <div class="block3__tab-title">
-                                    Sed ut perspiciatis unde omnis iste
-                                </div>
-                                <div class="block3__tab-subtitle">
-                                    Odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                                </div>
-                                <div class="block3__tab-btn">
-                                    <a href="#" class="button-blue">DISCOVER MORE</a>
-                                    <a href="#" class="button-white-outline">FIND STORE</a>
+                        <div class="block3__tab  block3__tab-slider">
+                            {% for i in  1..6 %}
+                            <div class="block3__tab-item">
+                                <figure class="block3__tab-img">
+                                    <img alt="" src="./assets/images/block3-img-1.png">
+                                </figure>
+                                <div class="block3__tab-text">
+                                    <div class="block3__tab-title">
+                                        Sed ut perspiciatis unde omnis iste
+                                    </div>
+                                    <div class="block3__tab-subtitle">
+                                        Odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                                    </div>
+                                    <div class="block3__tab-btn">
+                                        <a href="#" class="button button-blue">DISCOVER MORE</a>
+                                        <a href="#" class="button button-white-outline">FIND STORE</a>
+                                    </div>
                                 </div>
                             </div>
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="tab-pane fade" id="tab2">Profile</div>
+                    <div class="tab-pane fade" id="tab3">Profile</div>
                 </div>
             </div>
         </div>
     </div>
     <div class="block4">
-        <h2 class="block4__title"> thấu hiểu làn da hơn</h2>
-        <div class="block4__wrap block4__slider">
-            {% for i in  1..3 %}
-            <div class="block4__item">
-                <figure class="block4__item-img">
-                    <img alt="" src="./assets/images/logo.png">
-                </figure>
-                <div class="block4__item-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
-                <a href="#" class="block4__item-link">Read more ></a>
+        <h2 class="block4__title wow fadeInUp" data-wow-delay="0.1s"> thấu hiểu làn da hơn</h2>
+        <div class="block4__wrap  wow fadeInUp" data-wow-delay="0.2s">
+            <div class="block4__slider">
+                {% for i in  1..3 %}
+                <div class="block4__item">
+                    <figure class="block4__item-img">
+                        <img alt="" src="./assets/images/block4-img-{{i}}.jpg">
+                    </figure>
+                    <div class="block4__item-text">
+                        <div class="block4__item-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+                        <a href="#" class="block4__item-link">Read more ></a>
+                    </div>
+                </div>
+                {% endfor %}
+                {% for i in  1..3 %}
+                <div class="block4__item">
+                    <figure class="block4__item-img">
+                        <img alt="" src="./assets/images/block4-img-{{i}}.jpg">
+                    </figure>
+                    <div class="block4__item-text">
+                        <div class="block4__item-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+                        <a href="#" class="block4__item-link">Read more ></a>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
+            <div class="block4__slider-arrow">
+                <figure class="slick-prev slick-arrow">
+                    <img src="./assets/images/transparent-arrow-left.png" alt="">
+                </figure>
+                <figure class="slick-next slick-arrow">
+                    <img src="./assets/images/transparent-arrow-right.png" alt="">
+                </figure>
+            </div>
         </div>
     </div>
-    <div class="block5">
+    <section class="block5">
         <div class="block5__wrap">
-            <h2 class="block5__title">khách hàng tin dùng</h2>
-            <div class="block5__content block5__slider">
-                <div class="block5__item">
-                    <div class="block5__item-left">
-                        <div class="block5__item-title">Hà Vũ - NVVP</div>
-                        <div class="block5__item-des">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</div>
-                        <div class="block5__item-btn">
-                            <a href="#" class="button-blue">DISCOVER MORE</a>
-                            <a href="#" class="button-white-outline">BUY NOW</a>
+            <h2 class="block5__title wow fadeInUp" data-wow-delay="0.1s">khách hàng tin dùng</h2>
+            <div class="block5__content">
+                <div class="block5__arrow">
+                    <button type="button" class="slick-arrow slick-prev">
+                        <img src="./assets/images/arrow-left-trans.png" alt="">
+                    </button>
+                    <button type="button" class="slick-arrow slick-next">
+                        <img src="./assets/images/arrow-right-trans.png" alt="">
+                    </button>
+                </div>
+                <div class="block5__slider wow fadeInUp" data-wow-delay="0.2s">
+                    {% for i in  1..3 %}
+                    <div class="block5__item d-flex">
+                        <div class="block5__right">
+                            <div class="block5__item-content">
+                                <div class="block5__item-title">Hà Vũ - NVVP</div>
+                                <div class="block5__item-des">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</div>
+                                <div class="block5__item-btn">
+                                    <a href="#" class="button button-blue">DISCOVER MORE</a>
+                                    <a href="#" class="button button-white-outline">BUY NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block5__left wow fadeInUp">
+                            <figure class="block5__img">
+                                <img src="./assets/images/block5-img-right.jpg" alt="khách hàng tin dùng">
+                            </figure>
                         </div>
                     </div>
-                    <div class="block5__item-right">
-                        <figure class="block5__item-img">
-                            <img alt="" src="./assets/images/logo.png">
-                        </figure>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <div class="block6">
         <div class="block6__wrap">
-            <div class="block6__item">
-                <div class="block6__img">
-                    <img alt="" class="img" src="./assets/images/logo.png">
-                    <img alt="" class="icon" src="./assets/images/logo.png">
+            <div class="block6__slider wow fadeInUp" data-wow-delay="0.1s">
+                {% for i in  1..3 %}
+                <div class="block6__item">
+                    <div class="block6__img">
+                        <img alt="" class="img" src="./assets/images/block6-img-{{i}}.jpg">
+                        <img alt="" class="icon" src="./assets/images/icon-play.png">
+                    </div>
+                    <div class="block6__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                 </div>
-                <div class="block6__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                {% endfor %}
+                {% for i in  1..3 %}
+                <div class="block6__item">
+                    <div class="block6__img">
+                        <img alt="" class="img" src="./assets/images/block6-img-{{i}}.jpg">
+                        <img alt="" class="icon" src="./assets/images/icon-play.png">
+                    </div>
+                    <div class="block6__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="block6__slider-arrow">
+                <figure class="slick-prev slick-arrow">
+                    <img src="./assets/images/transparent-arrow-left.png" alt="">
+                </figure>
+                <figure class="slick-next slick-arrow">
+                    <img src="./assets/images/transparent-arrow-right.png" alt="">
+                </figure>
             </div>
         </div>
     </div>
     <div class="block7">
-        <div class="block7__wrap">
-            <div class="block7__left">
-                <figure class="block7__img">
-                    <img alt="" src="./assets/images/logo.png">
+        <div class="block7__wrap d-flex">
+            <div class="block7__left wow fadeInUp" data-wow-delay="0.1s">
+                <figure class="block7__img wow">
+                    <img alt="" src="./assets/images/block7-img.png">
                 </figure>
             </div>
             <div class="block7__right">
                 <h2 class="block7__title">
-                    register and get free sample
+                    register and get
+                    <br>
+                    free sample
                 </h2>
                 <form method="POST" class="block7__form form">
                     <div class="block7__form-wrap">
                         <div class="form-group wow fadeInUp" data-wow-delay="0.35s">
-                            <label>Họ và tên</label>
                             <input
                                 class="form-control block7Name"
                                 name="name"
@@ -154,7 +219,6 @@
                             >
                         </div>
                         <div class="form-group wow fadeInUp" data-wow-delay="0.4s">
-                            <label>Số điện thoại</label>
                             <input
                                 class="form-control block7Phone"
                                 name="phone"
@@ -163,7 +227,6 @@
                             >
                         </div>
                         <div class="form-group wow fadeInUp" data-wow-delay="0.45s">
-                            <label>Email</label>
                             <input
                                 class="form-control block7Email"
                                 name="email"
@@ -172,57 +235,76 @@
                             >
                         </div>
                         <div class="form-group wow fadeInUp" data-wow-delay="0.5s">
-                            <label>Address</label>
-                            <textarea placeholder="Your Address" class="form-control block7Email" name="email"></textarea>
+                            <textarea
+                                cols="2"
+                                placeholder="Your Address"
+                                class="form-control block7Email"
+                                name="email"
+                            ></textarea>
                         </div>
                     </div>
-                    <button class="button-blue">DISCOVER MORE</button>
+                    <button class="button button-blue wow fadeInUp" data-wow-delay="0.55s">DISCOVER MORE</button>
                 </form>
             </div>
         </div>
     </div>
     <div class="block8">
         <div class="block8__wrap">
-            <div class="block8__heading">
+            <div class="block8__heading wow fadeInUp" data-wow-delay="0.1s">
                 <div class="block8__title">our stores</div>
                 <div class="block8__sub-title">At vero eos et accusamus et iusto odio dignissimos ducimus qui</div>
             </div>
-            <div class="block8__content">
-                <a href="#" class="block8__item">
-                    <img alt="" class="icon" src="./assets/images/logo.png">
-                </a>
+            <div class="block8__content wow fadeInUp" data-wow-delay="0.2s">
+                <figure class="slick-prev slick-arrow">
+                    <img src="./assets/images/transparent-arrow-left.png" alt="">
+                </figure>
+                <div class="block8__slider">
+                    {% for i in  1..5 %}
+                    <a href="#" class="block8__item">
+                        <img alt="" class="icon" src="./assets/images/block8-img-{{i}}.jpg">
+                    </a>
+                    {% endfor %}
+                    <a href="#" class="block8__item">
+                        <img alt="" class="icon" src="./assets/images/block8-img-1.jpg">
+                    </a>
+                </div>
+                <figure class="slick-next slick-arrow">
+                    <img src="./assets/images/transparent-arrow-right.png" alt="">
+                </figure>
             </div>
         </div>
     </div>
-    <div class="block9__wrap d-flex">
-        <a class="block9__logo wow fadeInUp" data-wow-delay="0.1s" href="#">
-            <img src="./assets/images/logo.png" alt="">
-        </a>
-        <div class="block9__about wow fadeInUp" data-wow-delay="0.2s">
-            <div class="block9__about--content">
-                <div class="block9__about--item">
-                    <div>Thông tin  liên hệ</div>
-                    <div>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem</div>
+    <div class="block9">
+        <div class="block9__wrap d-flex">
+            <a class="block9__logo wow fadeIn" data-wow-delay="0.1s" href="#">
+                <img src="./assets/images/block9-logo.png" alt="Thông tin  liên hệ">
+            </a>
+            <div class="block9__about wow fadeIn" data-wow-delay="0.2s">
+                <div class="block9__about--content">
+                    <div class="block9__about--item">
+                        <div class="block9__label">Thông tin  liên hệ</div>
+                        <div class="block9__contact-text">Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem</div>
+                    </div>
+                    <div class="block9__about--item mb-0">
+                        <div class="block9__label">hotline:</div>
+                        <a href="tel:9999999999" class="block9__phone mb-0">
+                            999 999 9999
+                        </a>
+                    </div>
                 </div>
-                <div class="block9__about--item">
-                    <div>hotline:</div>
-                    <a href="tel:9999999999" class="block9__phone">
-                        999 999 9999
+            </div>
+            <div class="block9__contact wow fadeIn" data-wow-delay="0.3s">
+                <div class="block9__label">
+                    connect with us
+                </div>
+                <div class="block9__social">
+                    <a href="./#">
+                        <img src="./assets/images/icon-ins-white.png" alt="instagram">
+                    </a>
+                    <a href="./#">
+                        <img src="./assets/images/icon-fb-white.png" alt="facebook">
                     </a>
                 </div>
-            </div>
-        </div>
-        <div class="block9__contact wow fadeInUp" data-wow-delay="0.3s">
-            <div class="block9__label">
-                connect with us
-            </div>
-            <div class="block9__social socical">
-                <a href="./#">
-                    <img src="./assets/images/social-yt-big.png" alt="youtube">
-                </a>
-                <a href="./#">
-                    <img src="./assets/images/social-fb-big.png" alt="facebook">
-                </a>
             </div>
         </div>
     </div>
