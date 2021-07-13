@@ -89,11 +89,11 @@ function goToByScroll(link) {
     switch (link) {
 
         case 'about':
-            space = -10
+            space = -50
             break;
 
         case 'product':
-            space = -50
+            space = -80
             break;
 
         case 'store':
@@ -350,6 +350,23 @@ let sliderBlock8 = function () {
         ]
     });
 }
+let sliderProduct = function () {
+    $('.product-modal__for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: true,
+        asNavFor: '.product-modal__nav'
+    });
+    $('.product-modal__nav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.product-modal__for',
+        dots: false,
+        arrows: false,
+        focusOnSelect: true
+    });
+}
 
 $(window).on("load", function () {
     // common 
@@ -369,11 +386,17 @@ $(window).on("load", function () {
         }
     });
 
+    // slider in modal 
+    $('.modal').on('shown.bs.modal', function (e) {
+        $('.product-modal__for').slick('setPosition');
+        $('.product-modal__nav').slick('setPosition');
+        $('.product-modal').addClass('open');
+    })
 
     // slider on tab 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         if ($(".block3__tab").length > 1) {
-            $(".block3__tab-slider").slick('resize');
+            $(".block3__tab-slider").slick('setPosition');
         }
     })
 
@@ -383,7 +406,7 @@ $(window).on("load", function () {
     sliderBlock5()
     sliderBlock6()
     sliderBlock8()
-
+    sliderProduct()
     Block7ValidateForm()
 });
 
