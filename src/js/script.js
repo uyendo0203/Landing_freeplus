@@ -181,14 +181,14 @@ let MenuScrollFixed = function () {
 
 
 // home 
-$(".block1__slider .block1__img").hide()
-$(".block1__slider .block1__img:first-child").show()
+$(".block1__slider .block1__item ").hide()
+$(".block1__slider .block1__item:first-child").show()
 let sliderBlock1 = function () {
     if ($(".block1__slider").length === 0) {
         return false
     }
 
-    $(".block1__slider .block1__img").show()
+    $(".block1__slider .block1__item").show()
     $(".block1__slider").not('.slick-initialized').slick({
         arrows: true,
         dots: true,

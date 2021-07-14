@@ -35,6 +35,28 @@
         <script src="./assets/libs/lightbox/ekko-lightbox.min.js"></script>
         <script type="text/javascript">
 
+        let sliderProduct = function () {
+            $('#product-modal .product-modal__for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                fade: true,
+                asNavFor: '#product-modal .product-modal__nav'
+            });
+            $('#product-modal .product-modal__nav').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                asNavFor: '#product-modal .product-modal__for',
+                dots: false,
+                arrows: false,
+                focusOnSelect: true
+            });
+        }
+        
+        $(window).on("load", function () {
+            sliderProduct()
+        })
+
         $('body').on('click', '.popup-news__close', function (event) {
             $('.popup-news').removeClass("active");
         })
