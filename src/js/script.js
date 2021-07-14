@@ -351,17 +351,17 @@ let sliderBlock8 = function () {
     });
 }
 let sliderProduct = function () {
-    $('.product-modal__for').slick({
+    $('body')('#product-modal .product-modal__for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
         fade: true,
-        asNavFor: '.product-modal__nav'
+        asNavFor: '#product-modal .product-modal__nav'
     });
-    $('.product-modal__nav').slick({
+    $('#product-modal .product-modal__nav').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
-        asNavFor: '.product-modal__for',
+        asNavFor: '#product-modal .product-modal__for',
         dots: false,
         arrows: false,
         focusOnSelect: true
@@ -388,9 +388,9 @@ $(window).on("load", function () {
 
     // slider in modal 
     $('.modal').on('shown.bs.modal', function (e) {
-        $('.product-modal__for').slick('setPosition');
-        $('.product-modal__nav').slick('setPosition');
-        $('.product-modal').addClass('open');
+        $('#product-modal .product-modal__for').slick('setPosition');
+        $('#product-modal .product-modal__nav').slick('setPosition');
+        $('#product-modal ').addClass('open');
     })
 
     // slider on tab 
@@ -406,7 +406,7 @@ $(window).on("load", function () {
     sliderBlock5()
     sliderBlock6()
     sliderBlock8()
-    sliderProduct()
+    // sliderProduct()
     Block7ValidateForm()
 });
 
