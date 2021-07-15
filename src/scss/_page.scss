@@ -776,15 +776,21 @@
         }
     }
     &__title {
-        width: vw(300px);
+        // width: vw(300px);
+        width: 52%;
         margin: vw(30px) auto;
         text-transform: uppercase;
         font-family: $BarlowBold;
         line-height: 1.2;
+        font-size: vw(20px);
+        @media (max-width: 1400px) {
+            width: 80%;
+        }
         @media (max-width: 767px) {
             width: 100%;
             margin-top: 15px;
             padding: 0 20px;
+            font-size: 18px;
         }
     }
     &__slider-arrow {
@@ -1120,32 +1126,79 @@
         }
     }
 }
+
+.modal {
+    .modal-dialog {
+        height: 93%;
+        padding: 0 20px;
+        @include flexbox;
+        @include align-items(center);
+        @media (max-width: 767px) {
+            padding: 0 10px;
+        }
+    }
+    .modal-content {
+        border: vw(7px) solid #6eafd4;
+        border-radius: vw(20px);
+        @media (max-width: 767px) {
+            border: 5px solid #6eafd4;
+            border-radius: 20px;
+        }
+    }
+
+    .modal-body {
+        padding: vw(40px);
+        @media (max-width: 767px) {
+            padding: 30px 20px;
+            padding-right: 12px;
+        }
+    }
+
+    .close {
+        width: vw(105px);
+        right: vw(-3px);
+        top: -2.3vw;
+        float: none;
+        opacity: 1;
+        cursor: pointer;
+        position: absolute;
+        font-size: 0;
+        @media (max-width: 767px) {
+            width: 60px;
+            height: 20px;
+            top: -35px;
+        }
+    }
+}
+
 .news-modal {
     @media (min-width: 576px) {
         .modal-dialog {
-            max-width: 700px;
+            max-width: 1150px;
             margin: 1.75rem auto;
         }
     }
     .close {
-        float: none;
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        background: #006fae;
-        @include flex_center;
-        color: #fff;
-        border-radius: 50%;
-        right: -20px;
-        top: -20px;
-        opacity: 1;
-        cursor: pointer;
     }
     &__title {
+        color: #2c88bd;
+        text-transform: uppercase;
+        @include title();
+        line-height: 1.2;
+    }
+    &__time {
+        margin-bottom: vw(15px);
+        @media (max-width: 767px) {
+            margin-bottom: 15px;
+        }
     }
     &__content {
-        height: 70vh;
+        height: 60vh;
         overflow-y: auto;
+        @include scrollbar;
+        padding-right: 10px;
+    }
+    .modal-content {
     }
 }
 
@@ -1169,29 +1222,7 @@
             margin-right: auto;
         }
     }
-    .modal-content {
-        border: 7px solid #6eafd4;
-        border-radius: 20px;
-    }
 
-    .modal-body {
-        padding: vw(40px);
-    }
-
-    .close {
-        width: vw(105px);
-        right: vw(-3px);
-        top: -2.3vw;
-        float: none;
-        opacity: 1;
-        cursor: pointer;
-        position: absolute;
-        @media (max-width: 767px) {
-            width: 60px;
-            height: 20px;
-            top: -35px;
-        }
-    }
     .slick-arrow {
         width: vw(45px);
         height: vw(45px);
@@ -1264,7 +1295,7 @@
         }
     }
     &__nav {
-        margin-top: 15px;
+        margin-top: vw(15px);
         .img {
             background-color: #f6f6f6;
             border-radius: vw(7px);
@@ -1311,14 +1342,14 @@
     &__detail {
         background-color: #f6f6f6;
         border-radius: vw(5px);
-        padding: 14px 18px;
+        padding: vw(14px) vw(18px);
         @media (max-width: 767px) {
             border-radius: 5px;
         }
     }
     &__detail-wrap {
-        height: 345px;
-        padding-right: 20px;
+        height: vw(345px);
+        padding-right: vw(20px);
         overflow-y: auto;
         @include scrollbar;
         @media (max-width: 767px) {
