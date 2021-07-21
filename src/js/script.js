@@ -327,10 +327,10 @@ let sliderBlock8 = function () {
         dots: false,
         autoplay: false,
         autoplaySpeed: 3000,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 1,
         infinite: true,
-        variableWidth: true,
+        variableWidth: false,
         prevArrow: $('.block8 .slick-prev'),
         nextArrow: $('.block8 .slick-next'),
         responsive: [

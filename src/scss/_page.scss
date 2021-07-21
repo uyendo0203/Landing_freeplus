@@ -1003,6 +1003,10 @@
             margin-left: 10px;
         }
     }
+    .slick-track {
+        @include flexbox;
+        @include align-items(center);
+    }
 }
 
 .block9 {
