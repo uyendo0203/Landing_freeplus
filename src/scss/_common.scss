@@ -62,8 +62,9 @@ button {
     }
 }
 .main_content {
+    margin-top: vw(90px);
     @media (max-width: 767px) {
-        margin-top: 56px;
+        margin-top: 75px;
     }
 }
 .loading {
@@ -315,6 +316,10 @@ button {
     width: 100%;
     z-index: 999;
     top: 0;
+    height: vw(90px);
+    @media (max-width: 767px) {
+        height: 75px;
+    }
     &.fixed {
         background-color: #ffffffc7;
         box-shadow: 0px 0px 6px #ddd;
