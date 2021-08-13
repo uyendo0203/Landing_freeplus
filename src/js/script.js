@@ -89,12 +89,12 @@ let goToByScroll = function (link) {
     let space = 0
     switch (link) {
 
-        case 'about':
-            space = 0
+        case 'homepage':
+            space = -75
             break;
 
         case 'product':
-            space = -80
+            space = -50
             break;
 
         case 'store':
@@ -102,11 +102,11 @@ let goToByScroll = function (link) {
             break;
 
         case 'contactus':
-            space = -160
+            space = -70
             break;
 
         default:
-            space = 70
+            space = 0
             break;
     }
 
@@ -119,34 +119,26 @@ let goToByScroll = function (link) {
 
 }
 
-let MenuToggleMB = function () {
-    $('.header-menu__mb').click(function () {
-        $(this).toggleClass('active')
-        $('.header-menu__nav').toggleClass('active')
-    })
-}
 let Menu = function () {
 
     // on click menu header 
     $('.header-menu__nav a').click(function (e) {
 
-        let isBlock = $(this).attr('href').indexOf('#')
+        e.preventDefault();
 
-        if (isBlock != -1) { //true : is block
+        let link = $(this).attr('link')
 
-            e.preventDefault();
+        $('.header-menu__nav a').removeClass('active');
+        $('.header-menu__nav a[link="' + link + '"]').addClass('active');
 
-            let link = $(this).attr('link')
+        goToByScroll(link);
 
-            $('.header-menu__nav a').removeClass('active');
-            $('.header-menu__nav a[link="' + link + '"]').addClass('active');
-
-
-            if (link != '' && link != undefined) {
-                goToByScroll(link);
-            }
-        }
-
+    })
+}
+let MenuToggleMB = function () {
+    $('.header-menu__mb').click(function () {
+        $(this).toggleClass('active')
+        $('.header-menu__nav').toggleClass('active')
     })
 }
 let MenuScrollFixed = function () {
@@ -421,7 +413,7 @@ var sections = $('.block')
 let activeMenuOnScroll = function () {
     var cur_pos = $(this).scrollTop();
     sections.each(function () {
-        var top = $(this).offset().top - nav_height,
+        var top = $(this).offset().top - nav_height - 70,
             bottom = top + $(this).outerHeight();
 
         if (cur_pos >= top && cur_pos <= bottom) {
