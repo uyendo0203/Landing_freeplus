@@ -75,21 +75,22 @@ function validateForm($submit, form) {
     updateView();
 }
 
-
-let MenuToggleMB = function () {
-    $('.header-menu__mb').click(function () {
-        $(this).toggleClass('active')
-        $('.header-menu__nav').toggleClass('active')
-    })
+let goToBlock = function (eClick, eToGo) {
+    $(eClick).click(function (e) {
+        e.preventDefault()
+        $('html, body').animate({
+            scrollTop: $(eToGo).offset().top - 150
+        }, 1000);
+    });
 }
 
-function goToByScroll(link) {
+let goToByScroll = function (link) {
 
     let space = 0
     switch (link) {
 
         case 'about':
-            space = -50
+            space = 0
             break;
 
         case 'product':
@@ -118,6 +119,12 @@ function goToByScroll(link) {
 
 }
 
+let MenuToggleMB = function () {
+    $('.header-menu__mb').click(function () {
+        $(this).toggleClass('active')
+        $('.header-menu__nav').toggleClass('active')
+    })
+}
 let Menu = function () {
 
     // on click menu header 
@@ -142,6 +149,15 @@ let Menu = function () {
 
     })
 }
+let MenuScrollFixed = function () {
+    let headerHeight = $('.header').height()
+    let windowHeight = $(window).scrollTop()
+    if (windowHeight > (headerHeight + 10)) {
+        $('.header').addClass('fixed')
+    } else {
+        $('.header').removeClass('fixed')
+    }
+}
 
 let Block7ValidateForm = function () {
     var form = [{
@@ -158,25 +174,6 @@ let Block7ValidateForm = function () {
     }]
     var $submit = ".block7__form button";
     validateForm($submit, form);
-}
-
-let GotoForm = function () {
-    $('#home2_to_form').click(function (e) {
-        e.preventDefault()
-        $('html, body').animate({
-            scrollTop: $(".home5").offset().top - 150
-        }, 1000);
-    });
-}
-
-let MenuScrollFixed = function () {
-    let headerHeight = $('.header').height()
-    let windowHeight = $(window).scrollTop()
-    if (windowHeight > (headerHeight + 10)) {
-        $('.header').addClass('fixed')
-    } else {
-        $('.header').removeClass('fixed')
-    }
 }
 
 
@@ -199,7 +196,6 @@ let sliderBlock1 = function () {
         infinite: true,
     });
 }
-
 let sliderBlock3 = function () {
     if ($(".block3__tab-slider").length === 0) {
         return false
@@ -368,13 +364,19 @@ let sliderProduct = function () {
     });
 }
 
+
+
 $(window).on("load", function () {
     // common 
     $('.loading').removeClass('active')
     new WOW().init();
     MenuToggleMB()
-    GotoForm()
     Menu()
+
+    // to go block 
+    goToBlock('#home2_to_form', ".home5")
+    goToBlock('.block5__right .button-blue', "#product")
+
 
     // common 
     $(".fancybox").fancybox({
