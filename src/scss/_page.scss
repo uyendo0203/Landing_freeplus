@@ -1,3 +1,31 @@
+.modal {
+    &.policy,
+    &.term-condition {
+        .modal-dialog {
+            overflow: hidden;
+            max-width: 60%;
+            @media (max-width: 767px) {
+                max-width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .modal-content {
+            height: 80%;
+            overflow-y: auto;
+            @include scrollbar;
+            p,
+            span {
+                font-size: 1.04167vw !important;
+                line-height: 1.2 !important;
+                @media (max-width: 767px) {
+                    font-size: 3.5vw !important;
+                }
+            }
+        }
+    }
+}
+
 @mixin title {
     text-transform: uppercase;
     font-size: vw(40px);
@@ -297,7 +325,7 @@
             transform: translateY(vw(32px));
             .block3__tab-img {
                 transform: scale(1.2) translateY(vw(-30px));
-                background-color: #b4d6e9;
+                background-color: #e6f1f9;
             }
             .block3__tab-subtitle,
             .block3__tab-btn {
@@ -312,7 +340,7 @@
     &__tab-text {
     }
     &__tab-img {
-        background-color: #e9e9e9;
+        background-color: #fff;
         border-radius: vw(15px);
         @include flex_center;
         margin-bottom: vw(35px);
