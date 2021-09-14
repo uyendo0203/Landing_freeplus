@@ -10,10 +10,18 @@
                 margin-right: auto;
             }
         }
+
+        .modal-body {
+            @include scrollbar;
+            overflow-y: auto;
+            padding-right: 1vw;
+            margin-right: 0.5vw;
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+        }
         .modal-content {
             height: 80%;
-            overflow-y: auto;
-            @include scrollbar;
+            
             p,
             span {
                 font-size: 1.04167vw !important;
