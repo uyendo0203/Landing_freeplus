@@ -1254,7 +1254,11 @@
 
 .product-modal {
     // 6eafd4
-
+    .modal-content{
+        @media (max-width: 767px) {
+             margin-top: 10%;
+        }
+    }
     .modal-dialog {
         height: 95vh;
         @include flexbox;
@@ -1316,7 +1320,7 @@
         @media (max-width: 767px) {
             @include flex-direction(column);
             @include scrollbar;
-            max-height: 80vh;
+            max-height: 75vh;
             overflow-y: auto;
             padding-right: 10px;
         }

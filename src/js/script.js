@@ -110,6 +110,11 @@ let goToByScroll = function (link) {
             break;
     }
 
+    let window_width = $(window).width()
+    if(window_width < 767){
+         space = -70
+    }
+
     $('html,body').animate({
         scrollTop: $("#" + link).offset().top + space,
     }, 'slow');
@@ -221,7 +226,7 @@ let sliderBlock3 = function () {
             {
                 breakpoint: 575,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     centerMode: false,
                 }
             },
@@ -412,8 +417,16 @@ var sections = $('.block')
 
 let activeMenuOnScroll = function () {
     var cur_pos = $(this).scrollTop();
+
+    let space = 70;
+    let window_width = $(window).width()
+    if(window_width < 767){
+         nav_height = 0
+    }
+
+
     sections.each(function () {
-        var top = $(this).offset().top - nav_height - 70,
+        var top = $(this).offset().top - nav_height - space,
             bottom = top + $(this).outerHeight();
 
         if (cur_pos >= top && cur_pos <= bottom) {

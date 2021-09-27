@@ -385,6 +385,11 @@ button {
                 margin-right: 10px;
             }
         }
+        > .socical{
+            @media (max-width: 767px) {
+                display: none
+            }
+        }
     }
     &-menu__nav {
         @include flexbox;
