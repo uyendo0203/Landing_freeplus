@@ -127,7 +127,7 @@ let goToByScroll = function (link) {
 let Menu = function () {
 
     // on click menu header 
-    $('.header-menu__nav a').click(function (e) {
+    $('.header-menu__nav a[href="#"]').click(function (e) {
 
         e.preventDefault();
 
@@ -421,7 +421,7 @@ let activeMenuOnScroll = function () {
     let space = 70;
     let window_width = $(window).width()
     if(window_width < 767){
-         nav_height = 0
+         nav_height = 50
     }
 
 

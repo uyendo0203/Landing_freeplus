@@ -364,6 +364,7 @@
         color: rgba(0, 0, 0, 0.3);
         @media (max-width: 767px) {
             font-size: 18px;
+            min-height: 60px;
         }
     }
     &__tab-subtitle {
