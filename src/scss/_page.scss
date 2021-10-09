@@ -21,13 +21,71 @@
         }
         .modal-content {
             height: 80%;
-            
+
             p,
             span {
                 font-size: 1.04167vw !important;
                 line-height: 1.2 !important;
                 @media (max-width: 767px) {
                     font-size: 3.5vw !important;
+                }
+            }
+        }
+    }
+}
+.tab-content > .tab-pane {
+    display: block;
+    height: 0px;
+    overflow: hidden;
+}
+.tab-content > .active {
+    height: auto;
+}
+.block__nav-tab {
+    .nav {
+    }
+    .nav-tabs {
+        border-bottom: none;
+        justify-content: center;
+        margin-top: vw(40px);
+        .nav-item {
+            margin: 0 vw(30px);
+        }
+        .nav-link {
+            border: none;
+            background: 0;
+            font-family: $BarlowSemiBold;
+            text-transform: uppercase;
+            color: #000;
+            position: relative;
+            padding: 0;
+            padding-bottom: vw(14px);
+            font-size: vw(25px);
+            @media (max-width: 767px) {
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: vw(6px);
+                bottom: 0;
+                left: 0;
+                @media (max-width: 767px) {
+                    height: 3px;
+                }
+            }
+            &.active,
+            &:hover {
+                font-size: vw(30px);
+                font-family: $BarlowExtraBold;
+                color: #006fae;
+                @media (max-width: 767px) {
+                    font-size: 18px;
+                }
+                &::before {
+                    background-color: #7fb7d6;
                 }
             }
         }
@@ -269,54 +327,7 @@
             margin: 50px auto;
         }
     }
-    .nav {
-    }
-    .nav-tabs {
-        border-bottom: none;
-        justify-content: center;
-        margin-top: vw(40px);
-        .nav-item {
-            margin: 0 vw(30px);
-        }
-        .nav-link {
-            border: none;
-            background: 0;
-            font-family: $BarlowSemiBold;
-            text-transform: uppercase;
-            color: #000;
-            position: relative;
-            padding: 0;
-            padding-bottom: vw(14px);
-            font-size: vw(25px);
-            @media (max-width: 767px) {
-                font-size: 18px;
-                margin-bottom: 5px;
-            }
-            &::before {
-                position: absolute;
-                content: "";
-                width: 100%;
-                height: vw(6px);
-                bottom: 0;
-                left: 0;
-                @media (max-width: 767px) {
-                    height: 3px;
-                }
-            }
-            &.active,
-            &:hover {
-                font-size: vw(30px);
-                font-family: $BarlowExtraBold;
-                color: #006fae;
-                @media (max-width: 767px) {
-                    font-size: 18px;
-                }
-                &::before {
-                    background-color: #7fb7d6;
-                }
-            }
-        }
-    }
+
     .tab-content {
     }
     &__tab {
@@ -437,7 +448,11 @@
     @media (max-width: 767px) {
         padding-top: 30px;
     }
-
+    .block__nav-tab {
+        @media (max-width: 767px) {
+            margin-bottom: 20px;
+        }
+    }
     &__title {
         @include title();
         text-align: center;
@@ -1255,9 +1270,9 @@
 
 .product-modal {
     // 6eafd4
-    .modal-content{
+    .modal-content {
         @media (max-width: 767px) {
-             margin-top: 10%;
+            margin-top: 10%;
         }
     }
     .modal-dialog {

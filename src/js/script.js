@@ -111,8 +111,8 @@ let goToByScroll = function (link) {
     }
 
     let window_width = $(window).width()
-    if(window_width < 767){
-         space = -70
+    if (window_width < 767) {
+        space = -70
     }
 
     $('html,body').animate({
@@ -201,7 +201,7 @@ let sliderBlock3 = function () {
     $(".block3__tab-slider").not('.slick-initialized').slick({
         arrows: true,
         dots: false,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 3000,
         slidesToShow: 3,
         centerMode: true,
@@ -238,27 +238,31 @@ let sliderBlock4 = function () {
         return false
     }
 
-    $(".block4__slider").not('.slick-initialized').slick({
-        arrows: true,
-        dots: true,
-        autoplay: false,
-        autoplaySpeed: 3000,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-        prevArrow: $('.block4 .slick-prev'),
-        nextArrow: $('.block4 .slick-next'),
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    arrows: false
-                }
-            },
-        ]
-    });
+    $('.block4 .tab-pane').each(function (ele) {
+        let cName = "#block_tab" + (ele + 1);
+        $(cName + " .block4__slider").not('.slick-initialized').slick({
+            arrows: true,
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            prevArrow: $(cName + ' .slick-prev'),
+            nextArrow: $(cName + ' .slick-next'),
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        arrows: false
+                    }
+                },
+            ]
+        });
+    })
 }
+
 let sliderBlock5 = function () {
     if ($(".block5__slider").length === 0) {
         return false
@@ -396,6 +400,11 @@ $(window).on("load", function () {
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         if ($(".block3__tab").length > 1) {
             $(".block3__tab-slider").slick('setPosition');
+            $('.block3__tab-slider').slick('resize');
+        }
+        if ($(".block4__tab").length > 1) {
+            $(".block4__tab-slider").slick('setPosition');
+            $('.block4__tab-slider').slick('resize');
         }
     })
 
@@ -420,8 +429,8 @@ let activeMenuOnScroll = function () {
 
     let space = 70;
     let window_width = $(window).width()
-    if(window_width < 767){
-         nav_height = 50
+    if (window_width < 767) {
+        nav_height = 50
     }
 
 

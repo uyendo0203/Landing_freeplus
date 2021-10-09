@@ -48,7 +48,7 @@
                     <h3 class="block3__sub-title">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.</h3>
                 </div>
             </div>
-            <div class="block3__content">
+            <div class="block3__content block__nav-tab">
                 <ul class="nav nav-tabs wow fadeInUp" data-wow-delay="0.2s" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab" href="#tab1">Sản phẩm bán chạy</a>
@@ -65,7 +65,7 @@
                         <div class="block3__tab  block3__tab-slider">
                             {% for i in  1..6 %}
                             <div class="block3__tab-item">
-                                <figure class="block3__tab-img"data-toggle="modal" data-target="#product-modal">
+                                <figure class="block3__tab-img" data-toggle="modal" data-target="#product-modal">
                                     <img alt="" src="./assets/images/block3-img-1.png">
                                 </figure>
                                 <div class="block3__tab-text">
@@ -145,49 +145,108 @@
         </div>
     </div>
     <div class="block block4">
-        <h2 class="block4__title wow fadeInUp" data-wow-delay="0.1s"> thấu hiểu làn da hơn</h2>
-        <div class="block4__wrap  wow fadeInUp" data-wow-delay="0.2s">
-            <div class="block4__slider">
-                {% for i in  1..3 %}
-                <div class="block4__item">
-                    <figure class="block4__item-img">
-                        <img alt="" src="./assets/images/block4-img-{{i}}.jpg">
-                    </figure>
-                    <div class="block4__item-text">
-                        <div class="block4__item-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
-                        <a
-                            href="#"
-                            class="block4__item-link"
-                            data-toggle="modal"
-                            data-target="#News"
-                        >Read more ></a>
+        <div class="block__nav-tab">
+            <ul class="nav nav-tabs wow fadeInUp" data-wow-delay="0.1s" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active block4__title" data-toggle="tab" href="#block_tab1">thấu hiểu làn da hơn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link block4__title" data-toggle="tab" href="#block_tab2">Sản phẩm mới</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content wow fadeInUp" data-wow-delay="0.3s">
+            <div class="tab-pane fade show active" id="block_tab1">
+                <div class="block4__wrap">
+                    <div class="block4__tab block4__slider">
+                        {% for i in  1..3 %}
+                        <div class="block4__item">
+                            <figure class="block4__item-img">
+                                <img alt="" src="./assets/images/block4-img-{{i}}.jpg">
+                            </figure>
+                            <div class="block4__item-text">
+                                <div class="block4__item-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+                                <a
+                                    href="#"
+                                    class="block4__item-link"
+                                    data-toggle="modal"
+                                    data-target="#News"
+                                >Read more ></a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        {% for i in  1..3 %}
+                        <div class="block4__item">
+                            <figure class="block4__item-img">
+                                <img alt="" src="./assets/images/block4-img-{{i}}.jpg">
+                            </figure>
+                            <div class="block4__item-text">
+                                <div class="block4__item-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+                                <a
+                                    href="#"
+                                    class="block4__item-link"
+                                    data-toggle="modal"
+                                    data-target="#News"
+                                >Read more ></a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="block4__slider-arrow">
+                        <figure class="slick-prev slick-arrow">
+                            <img src="./assets/images/transparent-arrow-left.png" alt="">
+                        </figure>
+                        <figure class="slick-next slick-arrow">
+                            <img src="./assets/images/transparent-arrow-right.png" alt="">
+                        </figure>
                     </div>
                 </div>
-                {% endfor %}
-                {% for i in  1..3 %}
-                <div class="block4__item">
-                    <figure class="block4__item-img">
-                        <img alt="" src="./assets/images/block4-img-{{i}}.jpg">
-                    </figure>
-                    <div class="block4__item-text">
-                        <div class="block4__item-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
-                        <a
-                            href="#"
-                            class="block4__item-link"
-                            data-toggle="modal"
-                            data-target="#News"
-                        >Read more ></a>
-                    </div>
-                </div>
-                {% endfor %}
             </div>
-            <div class="block4__slider-arrow">
-                <figure class="slick-prev slick-arrow">
-                    <img src="./assets/images/transparent-arrow-left.png" alt="">
-                </figure>
-                <figure class="slick-next slick-arrow">
-                    <img src="./assets/images/transparent-arrow-right.png" alt="">
-                </figure>
+            <div class="tab-pane fade" id="block_tab2">
+                <div class="block4__wrap">
+                    <div class="block4__tab block4__slider">
+                        {% for i in  1..3 %}
+                        <div class="block4__item">
+                            <figure class="block4__item-img">
+                                <img alt="" src="./assets/images/block4-img-{{i}}.jpg">
+                            </figure>
+                            <div class="block4__item-text">
+                                <div class="block4__item-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+                                <a
+                                    href="#"
+                                    class="block4__item-link"
+                                    data-toggle="modal"
+                                    data-target="#News"
+                                >Read more ></a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        {#
+                        <div class="block4__item">
+                            <figure class="block4__item-img">
+                                <img alt="" src="./assets/images/block4-img-1.jpg">
+                            </figure>
+                            <div class="block4__item-text">
+                                <div class="block4__item-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+                                <a
+                                    href="#"
+                                    class="block4__item-link"
+                                    data-toggle="modal"
+                                    data-target="#News"
+                                >Read more ></a>
+                            </div>
+                        </div>
+                        #}
+                    </div>
+                    <div class="block4__slider-arrow">
+                        <figure class="slick-prev slick-arrow">
+                            <img src="./assets/images/transparent-arrow-left.png" alt="">
+                        </figure>
+                        <figure class="slick-next slick-arrow">
+                            <img src="./assets/images/transparent-arrow-right.png" alt="">
+                        </figure>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
